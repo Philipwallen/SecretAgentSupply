@@ -2,3 +2,91 @@ html {
 	font-size: 18px;
 	background-color: white;
 }
+
+body {
+	font-family: Helvetica, sans-serif;
+
+}
+
+/* this rule below will set all content within it
+in the center of the page as it shows up on the screen 
+
+because i placed all my content in a self identify tag along with
+ a global container tag I am able to have the  background color
+ span the width of the page even though the content on top
+ remains in the middle of the screen*/
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/* HEADER RULES */
+
+.header {
+	background-color: black;
+	color: white;
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	padding: 0.66rem 0rem 0.66rem 0.5rem;
+}
+
+.header img {
+	height: 1.5rem;
+	padding-right: 1rem;
+}
+
+.header span {
+	text-transform: uppercase;
+}
+
+/* COVER PHOTO RULES */
+
+.cover {
+	background-image: url('../../resources/images/moto.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 25rem;
+}
+
+.cover .new-container {
+	position: relative;
+	top: 9rem;
+	background-color: black;
+	color: white;
+	width: 20rem;
+	padding: 2rem 3rem;
+}
+
+.cover .top, .cover .bottom {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.cover .top {
+	font-size: 1rem;
+	padding-bottom: 0.25rem;
+}
+
+.cover .bottom {
+	font-size: 2rem;
+
+}
+
+/* NAVIGATION BAR RULES */
+
+nav {
+	background-color: firebrick;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	color: white;
+	padding: 0.75rem 0;
+}
