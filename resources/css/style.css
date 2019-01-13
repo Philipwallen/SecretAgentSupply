@@ -42,6 +42,7 @@ because i placed all my content in a self identify tag along with
 	text-transform: uppercase;
 }
 
+
 /* COVER PHOTO RULES */
 
 .cover {
@@ -51,7 +52,14 @@ because i placed all my content in a self identify tag along with
 	height: 25rem;
 }
 
-.cover .new-container {
+@media only screen and (max-width: 470px) {
+	
+	.cover {
+		height: 16.3rem;
+	}
+}
+
+.cover .desktop-container {
 	position: relative;
 	top: 9rem;
 	background-color: black;
@@ -75,6 +83,51 @@ because i placed all my content in a self identify tag along with
 
 }
 
+.mobile-container {
+	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	.cover .top {
+		font-size: 1.5rem;
+	}
+
+	.cover .bottom {
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.desktop-container {
+		display: none;
+	}
+
+	.mobile-container {
+		display: block;
+		position: relative;
+		top: 10rem;
+		background-color: black;
+		color: white;
+	}
+
+	.mobile-container .top,
+	.mobile-container .bottom {
+		padding: 1rem 0 1rem 2rem;
+		font-weight: bold;
+		font-family: Helvetica;
+	}
+
+	.mobile-container .top {
+		font-size: 0.77rem;
+	}
+
+	.mobile-contanier .bottom {
+		font-size: 1rem;
+	}
+}
+
+
+
 /* NAVIGATION BAR RULES */
 
 nav {
@@ -90,3 +143,141 @@ nav li {
 	color: white;
 	padding: 0.75rem 0;
 }
+
+.mobile-nav {
+	display: none;
+}
+
+@media only screen and ( max-width: 1024px) {
+	nav ul {
+		display: none;
+	}
+	.mobile-nav {
+		display: block;
+		text-align: center;
+
+	}
+}
+
+/* PRODUCTS CONTENT RULES */
+
+.products {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+
+.product {
+	border: 4px solid black;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	height: 9rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-container {
+	width: 30%;
+}
+
+.product img {
+	max-width: 8rem;
+	margin: 0 auto;
+}
+
+.description {
+	display: block;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+@media only screen and ( max-width: 1024px) {
+	.product-container {
+		width: 47%;
+		margin: 0 auto;
+	}
+
+	.glasses {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.product-container {
+		width: 90%;
+	}
+
+	.glasses, .watch {
+		display: none;
+	}
+}
+
+/*  CONTACT INFO CONTENT */	
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+
+.description1 {
+	background-color: black;
+	color: white;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.business-info {
+	width: 35%;
+}
+
+.info {
+	padding-bottom: 4rem;
+}
+
+@media only screen and (max-width: 470px) {
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.business-info {
+		width: 90%;
+	}
+
+	.info {
+		padding-bottom: 0.5rem;
+	}
+
+	.mobile-info {
+		padding-bottom: 3rem;
+	}
+}
+
+/* FOOTER CONTENT */
+.footer {
+	background-color: black;
+	height: 5rem;
+	color: white;
+}
+
+.center-me {
+	padding-top: 2.5rem;
+
+}
+
+@media only screen and (max-width: 470px) {
+	
+	.center-me {
+		padding-top: 2.5rem;
+		text-align: center;
+	}
+}
+
+
